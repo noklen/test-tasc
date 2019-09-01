@@ -1,0 +1,48 @@
+.footer {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  background: #000000;
+  font-family: 'Roboto Condensed', sans-serif;
+  .footer-nav {
+    width: 100%;
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    color: rgb(162, 161, 161);
+    cursor: pointer;
+    .footer-nav-content {
+      justify-content: center;
+      align-items: center;
+      .footer-text {
+        font-size: 15px;
+        color: rgb(162, 161, 161);
+        text-transform: uppercase;
+        line-height: 1.2;
+
+      }
+      .footer-text:hover {
+        color: rgb(242, 222, 123);
+      }
+    }
+  }
+  .footer-payment-list {
+    width: 100%;
+    display: flex;
+    margin: 0 0 5rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .payment-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .payment {
+        margin: 1rem;
+        cursor: pointer;
+
+      }
+    }
+  }
+}

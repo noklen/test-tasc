@@ -1,0 +1,21 @@
+.mobil-header {
+  .nav-button-header {
+    width: 30%;
+    padding: 0 1rem;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+  .mobi-logo {
+    width: 75px;
+  }
+
+}
+.header-none {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+}

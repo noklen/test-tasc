@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
     "clean-css": "^4.2.1",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -15,6 +16,7 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.12.0"

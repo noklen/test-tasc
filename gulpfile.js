@@ -6,6 +6,7 @@ const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const del = require('del');
 const htmlmin = require('gulp-html-minifier2');
+const imagemin = require('gulp-imagemin');
 
 function styles() {
     return gulp.src('./src/css/*.scss')
@@ -36,6 +37,13 @@ function html() {
 
 }
 
+function image() {
+    return gulp.src('./src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./build/images'));
+
+}
+
 function watch() {
     gulp.watch('./src/css/*.scss', styles);
     gulp.watch('./src/js/*.js', script);
@@ -51,6 +59,6 @@ gulp.task(
     'build',
     gulp.series(
         clean,
-        gulp.parallel(html, styles, script, watch)
+        gulp.parallel(html, styles, script, image, watch)
     )
 );

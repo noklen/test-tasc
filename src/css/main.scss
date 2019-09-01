@@ -1,7 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
 body {
-  margin: 10px;
-  display: flex;
-  p {
-    display: compact;
+margin: 0;
+  .button-blu {
+    background: rgba(70,93,166,1);
+    background: -moz-linear-gradient(top, rgba(70,93,166,1) 0%, rgba(28,60,166,0.9) 39%, rgba(95,117,191,0.87) 49%, rgba(70,93,166,0.87) 50%, rgba(28,60,166,0.81) 74%, rgba(28,60,166,0.74) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(70,93,166,1)), color-stop(39%, rgba(28,60,166,0.9)), color-stop(49%, rgba(95,117,191,0.87)), color-stop(50%, rgba(70,93,166,0.87)), color-stop(74%, rgba(28,60,166,0.81)), color-stop(100%, rgba(28,60,166,0.74)));
+    background: -webkit-linear-gradient(top, rgba(70,93,166,1) 0%, rgba(28,60,166,0.9) 39%, rgba(95,117,191,0.87) 49%, rgba(70,93,166,0.87) 50%, rgba(28,60,166,0.81) 74%, rgba(28,60,166,0.74) 100%);
+    background: -o-linear-gradient(top, rgba(70,93,166,1) 0%, rgba(28,60,166,0.9) 39%, rgba(95,117,191,0.87) 49%, rgba(70,93,166,0.87) 50%, rgba(28,60,166,0.81) 74%, rgba(28,60,166,0.74) 100%);
+    background: -ms-linear-gradient(top, rgba(70,93,166,1) 0%, rgba(28,60,166,0.9) 39%, rgba(95,117,191,0.87) 49%, rgba(70,93,166,0.87) 50%, rgba(28,60,166,0.81) 74%, rgba(28,60,166,0.74) 100%);
+    background: linear-gradient(to bottom, rgba(70,93,166,1) 0%, rgba(28,60,166,0.9) 39%, rgba(95,117,191,0.87) 49%, rgba(70,93,166,0.87) 50%, rgba(28,60,166,0.81) 74%, rgba(28,60,166,0.74) 100%);
+  }
+  .box-blu {
+    box-shadow: 0px 0px 35px -12px rgba(118,215,230,1), inset 0px 0px 35px -12px rgba(118,215,230,1);
+    border-radius: 4px;
+  }
+  .button-red {
+    background: rgba(173,104,79,1);
+    background: -moz-linear-gradient(top, rgba(173,104,79,1) 0%, rgba(184,141,127,1) 0%, rgba(199,149,131,1) 19%, rgba(184,141,127,1) 39%, rgba(153,43,3,1) 83%, rgba(153,43,3,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(173,104,79,1)), color-stop(0%, rgba(184,141,127,1)), color-stop(19%, rgba(199,149,131,1)), color-stop(39%, rgba(184,141,127,1)), color-stop(83%, rgba(153,43,3,1)), color-stop(100%, rgba(153,43,3,1)));
+    background: -webkit-linear-gradient(top, rgba(173,104,79,1) 0%, rgba(184,141,127,1) 0%, rgba(199,149,131,1) 19%, rgba(184,141,127,1) 39%, rgba(153,43,3,1) 83%, rgba(153,43,3,1) 100%);
+    background: -o-linear-gradient(top, rgba(173,104,79,1) 0%, rgba(184,141,127,1) 0%, rgba(199,149,131,1) 19%, rgba(184,141,127,1) 39%, rgba(153,43,3,1) 83%, rgba(153,43,3,1) 100%);
+    background: -ms-linear-gradient(top, rgba(173,104,79,1) 0%, rgba(184,141,127,1) 0%, rgba(199,149,131,1) 19%, rgba(184,141,127,1) 39%, rgba(153,43,3,1) 83%, rgba(153,43,3,1) 100%);
+    background: linear-gradient(to bottom, rgba(173,104,79,1) 0%, rgba(184,141,127,1) 0%, rgba(199,149,131,1) 19%, rgba(184,141,127,1) 39%, rgba(153,43,3,1) 83%, rgba(153,43,3,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad684f', endColorstr='#992b03', GradientType=0 );
+  }
+  .box-red {
+    border-radius: 4px;
+    box-shadow: 0px 0px 35px -12px rgb(255, 72, 0), inset 0px 0px 35px -12px rgb(255, 72, 0);
+
+  }
+  .top-menu {
+    display: flex;
+    background: rgb(17, 17, 17);
+
+    .text-decor {
+      text-decoration: none;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: rgb(162, 161, 161);
+      text-transform: uppercase;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+      .about-casino, ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        li {
+
+          .text-decor {
+            padding: 5px;
+            color: rgb(162, 161, 161);
+          }
+
+          .text-decor:hover {
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(242, 222, 123);
+            text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+          }
+
+        }
+      }
+    .fast-registration {
+      color: rgb(242, 222, 123);
+      text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+
+      .fast-registration-content {
+        display: flex;
+        align-items: center;
+        padding: 4px 20px 0 30px;
+        .icon-fast-registration {
+        }
+      }
+    }
+    .social-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .social-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        border-radius: 4px;
+        background: rgb(101, 102, 102);
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+
+        .social {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+
+        }
+      }
+      .social-list:hover {
+        border-style: solid;
+        border-width: 2px;
+        border: rgb(255, 206, 129);
+        border-radius: 4px;
+        background: rgb(255, 206, 129);
+        box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+  .game-container {
+    background: url("../../src/images/bg.png") ;
+    background-size: 100% 100%;
+
   }
 }
+
+
+.dropdown {
+  padding-left: 30px;
+  position: relative;
+  display: inline-block;
+  color: #a2a1a1;
+  .dropbtn {
+    background: url('../../src/images/usFlag.png') no-repeat left center;
+    width: 40px;
+    padding: 5px 5px 5px 25px;
+    cursor: pointer;
+  }
+  .dropbtn::after {
+    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 16px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 140px;
+    z-index: 10000;
+  }
+
+
+}
+
+.dropdown:hover {
+  .dropbtn {
+    color: rgb(242, 222, 123);
+    text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+  }
+}
+
+
+
+.dropdown-content a:first-child
+{
+  background: url('../../src/images/usFlag.png') no-repeat left center;
+}
+
+.dropdown-content a:last-child
+{
+  background: url('../../src/images/ruFflag.png') no-repeat left center;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 0 2px 25px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 769px) {
+  .top-menu {
+    display: none!important;
+  }
+}
+
