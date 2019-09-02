@@ -189,7 +189,7 @@
   }
 
 }
-@media(max-width: 1024px) {
+@media screen and(max-width: 1024px) {
   .game-menu-box {
     width: 80%;
     .promotion-box {
@@ -204,7 +204,7 @@
     display: none;
   }
 }
-@media(max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .carousel-indicators {
     right: 400px;
     bottom: 400px;
@@ -231,7 +231,7 @@
   }
 
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .filter-list {
     display: none;
   }
@@ -239,7 +239,7 @@
     width: 90%;
   }
 }
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .game-menu-box {
     width: 100%;
   }

@@ -61,7 +61,7 @@
     }
   }
 }
- @media(max-width: 1024px) {
+ @media screen and (max-width: 1024px) {
    .jackpot-container{
      display: flex;
      justify-content: center;
@@ -76,7 +76,7 @@
    }
  }
 
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .filter-list-text {
     font-size: 14px!important;
   }
