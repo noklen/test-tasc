@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const htmlmin = require('gulp-html-minifier2');
 const imagemin = require('gulp-imagemin');
+const njkRender = require('gulp-nunjucks-render');
 
 function styles() {
     return gulp.src('./src/css/*.scss')
@@ -43,12 +44,18 @@ function image() {
         .pipe(gulp.dest('./build/images'));
 
 }
+function nunjucks() {
+    return gulp.src('./main.njk')
+        .pipe(njkRender())
+        .pipe(gulp.dest('./build'));
+
+}
 
 function watch() {
     gulp.watch('./src/css/*.scss', styles);
     gulp.watch('./src/js/*.js', script);
     gulp.watch('./index.html', html);
-
+    gulp.watch('./**/*.njk', nunjucks);
 }
 
 function clean() {
@@ -59,6 +66,14 @@ gulp.task(
     'build',
     gulp.series(
         clean,
-        gulp.parallel(html, styles, script, image, watch)
+        gulp.parallel(html, styles, script, image, nunjucks, watch)
     )
 );
+
+gulp.task('style', styles);
+gulp.task('script', script);
+gulp.task('html', html);
+gulp.task('image', image);
+gulp.task('nunjuck', nunjucks);
+gulp.task('watch', watch);
+gulp.task('clean', clean);
