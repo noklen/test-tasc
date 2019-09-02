@@ -3,14 +3,24 @@
   height: 100%;
   font-family: 'Roboto Condensed', sans-serif;
   .jackpot-container {
+    display: flex;
+    align-items: center;
     padding: 2rem 0;
     .jackpot-text {
-      margin: 13px 55px;
+      margin: 13px 55px 30px 55px;
       font-size: 18px;
       text-transform: uppercase;
       color: #ffce81;
       line-height: 1.111;
-      text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+      text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+    }
+    .jackpot-text-number {
+      margin: 13px 13px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #ffce81;
+      line-height: 1.111;
+      text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
     }
     .win-players {
       display: flex;
@@ -28,7 +38,7 @@
           margin-left: 10px;
           color: rgb(255, 255, 255);
           font-weight: bold;
-          font-size: 12px;
+          font-size: 11px;
           .win-game {
             text-transform: uppercase;
           }

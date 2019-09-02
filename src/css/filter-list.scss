@@ -3,24 +3,28 @@
   font-family: 'Roboto Condensed', sans-serif;
 
   .filter-list {
-
     .filter-list-butt {
       width: 100%;
       background: none;
       border: 2px solid rgb(255, 206, 129);
+      border-radius: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 5px #a54635 inset;
+      box-shadow: 0 0 9pt 2pt #a54635, inset 0 0 9pt 2pt #a54635;
+      cursor: pointer;
 
       .filter-list-text {
         //text-align: center;
         text-decoration: none;
         font-size: 18px;
         color: rgb(242, 222, 123);
-        text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+        text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
         cursor: pointer;
       }
+    }
+    .filter-list-butt:hover {
+      box-shadow: 0 0 9pt 4pt #a54635, inset 0 0 9pt 4pt #a54635;
     }
 
     .filter-group {
@@ -43,7 +47,7 @@
         margin: 0 0 0 auto;
         border: 2px solid rgb(129, 251, 255);
         border-radius: 4px;
-        box-shadow: 0px 0px 35px -12px rgba(118,215,230,1);
+        box-shadow: 0 0 9pt 2pt rgba(118,215,230,1), inset 0 0 9pt 2pt rgba(118,215,230,1);
         display: flex;
         align-items: center;
 
@@ -137,7 +141,6 @@
           margin: 10px;
           padding: 2px 15px;
           color: #76d7e6;
-          outline: 2px solid #76d7e6;
           text-transform: uppercase;
         }
 
@@ -147,7 +150,6 @@
           border: 2px solid #f5bc76;
           border-radius: 2px;
           color: #f5bc76;
-          outline: 2px solid #ae3514;
           text-transform: uppercase;
         }
       }
@@ -164,7 +166,6 @@
       margin: 2rem;
 
       .more-game {
-        outline: 2px solid rgb(46, 95, 255);
         color: #81fbff;
         border: 2px solid #81fbff;
         border-radius: 2px;
