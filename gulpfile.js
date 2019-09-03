@@ -8,6 +8,7 @@ const del = require('del');
 const htmlmin = require('gulp-html-minifier2');
 const imagemin = require('gulp-imagemin');
 const njkRender = require('gulp-nunjucks-render');
+const prettify = require('gulp-html-prettify');
 
 function styles() {
     return gulp.src('./src/css/*.scss')
@@ -45,8 +46,9 @@ function image() {
 
 }
 function nunjucks() {
-    return gulp.src('./main.njk')
+    return gulp.src('src/nunjucks/components/*.njk')
         .pipe(njkRender())
+        .pipe(prettify({indent_size : 4}))
         .pipe(gulp.dest('./build'));
 
 }
