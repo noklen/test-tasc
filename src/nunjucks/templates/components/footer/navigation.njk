@@ -1,0 +1,40 @@
+{% set footerNav = [
+    { name: 'about casino' },
+    { name: 'terms and condition' },
+    { name: 'responsible gaming' },
+    { name: 'contact us' }
+] %}
+
+ {% set paymentImgList = [
+     { url: 'images/MASTERCARD.png' },
+     { url: 'images/YANDEX.png' },
+     { url: 'images/visa.png' },
+     { url: 'images/LIQPAY.png' },
+     { url: 'images/QIWI.png' }
+ ] %}
+
+{% macro footer_nav(class) %}
+    <div class="footer-nav">
+        <ul class="nav footer-nav-content">
+            {% for content in footerNav %}
+                <li class="nav-item {{ class }}">
+                    <a class="nav-link footer-text" href="#">{{ content.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endmacro %}
+
+{% macro payment_img(class) %}
+    <ul class="payment-list">
+        {% for img in paymentImgList %}
+            <li class="payment {{ class }}">
+                <a href="">
+                    <img src="{{ img.url }}" alt="">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
