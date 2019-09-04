@@ -29,5 +29,9 @@ $(document).ready(function() {
     $(window).on('load resize',winSize);
     $(window).on('load resize',moveGame);
 
+    $('.navicon').click(function(e){
+        $(this).next().slideToggle(500);
+    });
+
 
 });

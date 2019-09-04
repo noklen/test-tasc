@@ -1,0 +1,35 @@
+{% set headerNaviList = [
+    { name: 'Все игры' },
+    { name: 'Пополнение счета' },
+    { name: 'Получить выигрыш' },
+    { name: 'Бонусы' },
+    { name: 'Мобильная версия' },
+    { name: 'Контакты' }
+] %}
+{% set socialList = [
+    { url: 'images/facebook.png' },
+    { url: 'images/twitter.png' },
+    { url: 'images/vk.png' }
+] %}
+
+{% macro header_nav(class) %}
+    <ul class=" about-casino">
+        {% for item in headerNaviList %}
+            <li class="{{ class }}">
+                <a href="" class="nav-link text-decor">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro social(class) %}
+    <ul class="nav">
+        {% for item in socialList %}
+            <li class="{{ class }}">
+                <a class="nav-link social" href="#">
+                    <img src="{{ item.url }}" alt="">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

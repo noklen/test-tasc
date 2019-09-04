@@ -1,4 +1,204 @@
+.header {
+  background: #000000;
+  .header-content {
 
+    .top-menu {
+      display: flex;
+      .text-decor {
+        text-decoration: none;
+        font-family: 'Roboto Condensed', sans-serif;
+        color: rgb(162, 161, 161);
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 1.2;
+      }
+      .about-casino, ul {
+        display: flex;
+        margin: auto 0;
+        padding: 0;
+        align-items: center;
+        list-style: none;
+
+        li {
+
+          .text-decor {
+            padding: 5px;
+            color: rgb(162, 161, 161);
+          }
+
+          .text-decor:hover {
+            text-decoration: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(242, 222, 123);
+            text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+          }
+
+        }
+      }
+      .fast-registration {
+        color: rgb(242, 222, 123);
+        text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+
+        .fast-registration-content {
+          display: flex;
+          align-items: center;
+          padding: 4px 20px 0 30px;
+          .icon-fast-registration {
+          }
+        }
+      }
+      .social-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .social-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 5px;
+          border-radius: 4px;
+          background: rgb(101, 102, 102);
+          width: 23px;
+          height: 23px;
+          cursor: pointer;
+
+          .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+          }
+        }
+        .social-list:hover {
+          border-style: solid;
+          border-width: 2px;
+          border: rgb(255, 206, 129);
+          border-radius: 4px;
+          background: rgb(255, 206, 129);
+          box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.75);
+        }
+      }
+      .dropdown {
+        padding-left: 30px;
+        position: relative;
+        display: inline-block;
+        color: #a2a1a1;
+        .dropbtn {
+          background: url('../../src/images/usFlag.png') no-repeat left center;
+          width: 40px;
+          padding: 5px 5px 5px 25px;
+          cursor: pointer;
+        }
+        .dropbtn::after {
+          background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
+          content: "";
+          height: 16px;
+          position: absolute;
+          right: 0;
+          top: 7px;
+          width: 16px;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          width: 140px;
+          z-index: 10000;
+        }
+
+
+      }
+
+      .dropdown:hover {
+        .dropbtn {
+          color: rgb(242, 222, 123);
+          text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+        }
+      }
+      .dropdown-content a:first-child
+      {
+        background: url('../../src/images/usFlag.png') no-repeat left center;
+      }
+
+      .dropdown-content a:last-child
+      {
+        background: url('../../src/images/ruFflag.png') no-repeat left center;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 2px 0 2px 25px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {background-color: #f1f1f1}
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    }
+
+  }
+  .top-menu-login {
+    height: 82px;
+    background: url("../../src/images/logo.png") no-repeat;
+    background-size: 100% 100%;
+    .login-content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 82px;
+      font-family: 'Roboto Condensed', sans-serif;
+
+      .registration-butt {
+        padding: 4px 15px;
+        border: 2px solid rgb(129, 251, 255);
+        font-size: 13px;
+        color: rgb(129, 251, 255);
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+      .login-input {
+        width: 112px;
+        height: 27px;
+        margin: 0 10px;
+        border-radius: 2px;
+        font-style: italic;
+      }
+      .pass-group {
+        margin-top: 22px;
+      }
+      .forgot-pass {
+        padding-left: 10px;
+        text-transform: capitalize;
+        font-size: 14px;
+        color: rgb(162, 161, 161);
+        font-style: italic;
+        line-height: 1.2;
+      }
+      .forgot-pass:hover {
+        text-decoration: none;
+        color: rgb(242, 222, 123);
+        text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #49FF18, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
+      }
+      .login-butt {
+        padding: 4px 20px;
+        border: 2px solid rgb(255, 206, 129);
+        font-size: 13px;
+        color: rgb(255, 206, 129);
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+}
 
 .mobil-header {
   .nav-button-header {

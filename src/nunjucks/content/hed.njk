@@ -1,111 +1,67 @@
+{% from "src/nunjucks/templates/components/header/headerComponent.njk" import header_nav, social %}
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark stiky-top mobil-header header-none">
-        <a class="navbar-brand" href="#">
-            <img class="mobi-logo" src="images/mobil.png" alt="">
-        </a>
-        <button class="navbar-brand nav-button-header button-blu box-blu">registration</button>
-        <button class="navbar-brand nav-button-header button-red box-red">login</button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Все игры</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Пополнение счета</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Бполучить выигрыш</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Бонусы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Быстрая регистрация</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="images/usFlag.png" alt="">English</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="images/ruFflag.png" alt="">Русский</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    {#<nav class="navbar navbar-expand-lg navbar-dark bg-dark stiky-top mobil-header header-none">#}
+        {#<a class="navbar-brand" href="#">#}
+            {#<img class="mobi-logo" src="images/mobil.png" alt="">#}
+        {#</a>#}
+        {#<button class="navbar-brand nav-button-header button-blu box-blu">registration</button>#}
+        {#<button class="navbar-brand nav-button-header button-red box-red">login</button>#}
+        {#<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">#}
+            {#<span class="navbar-toggler-icon"></span>#}
+        {#</button>#}
+        {#<div class="collapse navbar-collapse" id="navbarNavDropdown">#}
+            {#<ul class="navbar-nav">#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#">Все игры</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#">Пополнение счета</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#">Бполучить выигрыш</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#">Бонусы</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#">Контакты</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#">Быстрая регистрация</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#"><img src="images/usFlag.png" alt="">English</a>#}
+                {#</li>#}
+                {#<li class="nav-item">#}
+                    {#<a class="nav-link" href="#"><img src="images/ruFflag.png" alt="">Русский</a>#}
+                {#</li>#}
+            {#</ul>#}
+        {#</div>#}
+    {#</nav>#}
     <div class="top-menu">
-        <div class="container">
-            <div class="row">
-                <ul class="col-md-auto nav about-casino">
-                    <li class="nav-item">
-                        <a href="" class="nav-link text-decor">Все игры</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link text-decor">Пополнение счета</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link text-decor">Получить выигрыш</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link text-decor">Бонусы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link text-decor">Мобильная версия</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link text-decor">Контакты</a>
-                    </li>
-                </ul>
-                <div class="col-md-auto row">
-                    <a href="" class="fast-registration text-decor">
-                        <span class="fast-registration-content"><img src="images/flash.png" alt="">Быстрая регистрация</span>
-                    </a>
-                    <div class="social-content">
-                        <ul class="nav">
-                            <li class="nav-item social-list">
-                                <a class="nav-link social" href="#">
-                                    <img src="images/facebook.png" alt="">
-                                </a>
-                            </li>
-                            <li class="nav-item social-list">
-                                <a class="nav-link social" href="#">
-                                    <img src="images/twitter.png" alt="">
-                                </a>
-                            </li>
-                            <li class="nav-item social-list">
-                                <a class="nav-link social" href="#">
-                                    <img src="images/vk.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <div class="dropbtn">English</div>
-                        <div class="dropdown-content">
-                            <a href="#">English</a>
-                            <a href="#">Русский</a>
-                        </div>
-                    </div>
-                </div>
-
+        {{ header_nav('nav-item ') }}
+        <a href="" class="fast-registration text-decor">
+            <span class="fast-registration-content"><img src="images/flash.png" alt="">Быстрая регистрация</span>
+        </a>
+        <div class="social-content">
+            {{ social('nav-item social-list') }}
+        </div>
+        <div class="dropdown">
+            <div class="dropbtn">English</div>
+            <div class="dropdown-content">
+                <a href="#">English</a>
+                <a href="#">Русский</a>
             </div>
         </div>
     </div>
     <div class="top-menu-login">
-        <div class="container">
-            <div class="row justify-content-end"></div>
-            <div class="col login-content">
+            <div class=" login-content">
                 <button class="registration-butt button-blu box-blu button-hover-blu">registration</button>
                 <input type="text" class="form-control login-input" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                 <div>
                     <input type="password" class="form-control login-input pass-group" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                     <a href="" class="forgot-pass">forgot you password?</a>
                 </div>
-                <buttin class="login-butt button-red box-red button-hover-red">login</buttin>
+                <button class="login-butt button-red box-red button-hover-red">login</button>
             </div>
-        </div>
     </div>
