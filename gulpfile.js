@@ -49,6 +49,7 @@ function nunjucks() {
     return gulp.src('src/nunjucks/pages/*.njk')
         .pipe(njkRender())
         .pipe(prettify({indent_size : 4}))
+        // .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('./build'));
 
 }
@@ -76,6 +77,6 @@ gulp.task('style', styles);
 gulp.task('script', script);
 // gulp.task('html', html);
 gulp.task('image', image);
-gulp.task('nunjuck', nunjucks);
+gulp.task('nunjucks', nunjucks);
 gulp.task('watch', watch);
 gulp.task('clean', clean);
