@@ -9,6 +9,17 @@ body {
   ul {
     list-style: none;
   }
+  .mobil-back {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 999;
+    background: #000000;
+    opacity: 0.5;
+  }
+  .none {
+    display: none;
+  }
 
   .container {
     width: 1000px;
@@ -16,7 +27,7 @@ body {
   }
   .button-blu {
     background: rgba(70,93,166,0.5);
-    background: linear-gradient(to bottom, rgba(70,93,166,1) 0%, rgba(28,60,166,0.9) 39%, rgba(95,117,191,0.87) 49%, rgba(70,93,166,0.87) 50%, rgba(28,60,166,0.81) 74%, rgba(28,60,166,0.74) 100%);
+    background: linear-gradient(to bottom, rgba(132,187,235,1) 0%, rgba(0,103,214,1) 100%);
   }
   .box-blu {
     box-shadow: 0 0 9pt 2pt rgba(118,215,230,1), inset 0 0 9pt 2pt rgba(118,215,230,1);
@@ -52,30 +63,19 @@ body {
   }
 }
 @media screen and (max-width: 1023px) {
-  .container {
-    width: 730px;
+  body .container {
+    width: 740px;
   }
 }
 
 
 @media screen and (max-width: 767px) {
-  .container {
+  body .container {
     width: 100%;
   }
-  //.top-menu {
-  //  display: none!important;
-  //}
+
 }
 
-//body {
-//  left: 0;
-//  margin: 0;
-//  overflow: hidden;
-//  position: relative;
-//}
-
-
-/* Menu */
 
  @media screen and (max-width: 767px) {
    .btn {
@@ -86,5 +86,6 @@ body {
      color: #ffffff;
      font-size: 14px;
      text-transform: uppercase;
+     //line-height: 40px;
    }
  }

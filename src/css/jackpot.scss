@@ -28,7 +28,8 @@
       justify-content: center;
       align-items: center;
       .win-card {
-        display: flex;
+        //width: 160px!important;
+        display: flex!important;
         flex-direction: row;
         margin: 0 10px;
         .win-card-img {
@@ -63,6 +64,16 @@
     }
   }
 }
+.winner-box {
+  max-width: 60%;
+  .winerCarousel {
+    width: 90%;
+  }
+
+}
+.jackpot-box {
+  max-width: 40%;
+}
  @media screen and (max-width: 1024px) {
    .jackpot-container{
      display: flex;
@@ -71,6 +82,9 @@
      flex-direction: column;
      .winner-box {
        max-width: 100%;
+       .winerCarousel {
+         width: 100%;
+       }
      }
      .jackpot-box {
        max-width: 100%;

@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<div class="mobil-back none"></div>
 <header class="header" id="header">
 	<div class="container header-content">
 		{% include "src/nunjucks/content/hed.njk" %}
@@ -18,13 +19,10 @@
 </header>
 <section class="content " id="content">
 	<section class="logo slider" id="logo">
-		<div class="container">
-			{% block logo %}{% endblock %}
-		</div>
+		<img class="slider-img" src="images/slider.png" alt="">
 	</section>
 	<section class="jackpot" id="jackpot">
 		<div class="container">
-			<p>jackpot</p>
 			{% block jackpot %}{% endblock %}
 		</div>
 	</section>

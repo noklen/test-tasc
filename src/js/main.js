@@ -29,29 +29,28 @@ $(document).ready(function() {
     // $(window).on('load resize',winSize);
     // $(window).on('load resize',moveGame);
 
-//     $('.winerCarousel').slick({
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 2000,
-// });
-//     $('.winer').slick ({
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 2000,
-//     });
+    $('.winerCarousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        // variableWidth: true,
+});
+
 
         $('.icon-menu').click(function() {
             $('.menu').animate({
                 left: '0px'
             }, 200);
+            $('.mobil-back').removeClass('none');
+
         });
 
-        $('.icon-close').click(function() {
+        $('.mobil-back').click(function() {
             $('.menu').animate({
                 left: '-285px'
             }, 200);
+            $('.mobil-back').addClass('none');
         });
 
 

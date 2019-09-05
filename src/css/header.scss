@@ -43,8 +43,6 @@
           display: flex;
           align-items: center;
           padding: 4px 20px 0 30px;
-          .icon-fast-registration {
-          }
         }
       }
       .social-content {
@@ -143,11 +141,25 @@
       display: none;
       .mobile-menu-list {
         display: grid;
+        padding: 0;
+        margin: 0;
         grid-template-columns: 0.3fr 1.5fr 0.8fr;
         justify-content: center;
         align-items: center;
-        padding: 0;
         text-align: center;
+        .green-btn {
+          margin: 1px;
+          background: linear-gradient(to bottom,#c6ff62 0%,#00c309 50%,#006017 100%);
+        }
+        .orange-btn {
+          background: linear-gradient(to bottom,#fdca0b 0%,#ffba00 50%,#f04e23 100%);
+        }
+        .mobi-list {
+          justify-items: center;
+          align-items: center;
+          height: 100%;
+
+        }
 
       }
     }
@@ -229,9 +241,6 @@
   z-index: 10000;
 }
 
-
-/* Basic CSS */
-
 .background {
   height: 100%;
   width: 100%;
@@ -270,10 +279,16 @@
 }
 
 .icon-close {
+  display: flex;
+  align-items: center;
+  text-align: center;
   cursor: pointer;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 6px;
+  margin: 10px;
+  .mobi-lan {
+    margin: auto;
+    width: 40px;
+    height: 25px;
+  }
 }
 
 .icon-menu {
@@ -283,7 +298,22 @@
   font-size: 20px;
   text-decoration: none;
   text-transform: uppercase;
+  .hamburger {
+    height: 27px;
+  }
 }
+@media screen and (max-width: 1023px) {
+  .text-decor {
+    font-size: 8px!important;
+  }
+  .fast-registration-content {
+    padding: 0!important;
+  }
+  .dropdown {
+    padding: 0!important;
+  }
+}
+
 
 @media screen and (max-width: 767px) {
   .mobile-menu {

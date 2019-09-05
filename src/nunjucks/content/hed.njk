@@ -1,14 +1,10 @@
 {% from "src/nunjucks/templates/components/header/headerComponent.njk" import header_nav, social %}
 <div class="menu">
     <div class="icon-close">
-        <img src="images/close-btn.png">
+        <img class="mobi-lan" src="images/usFlag.png">
+        <img class="mobi-lan" src="images/rufFlag.png">
     </div>
-    <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+    {{ header_nav('nav-item ') }}
 </div>
 
 <div class="top-menu">
@@ -29,13 +25,13 @@
 </div>
 <div class="mobile-menu">
     <ul class="mobile-menu-list">
-        <li class="icon-menu">
-            <a class="btn icon-menu" data-id=""><img src="https://img.icons8.com/ultraviolet/40/000000/menu.png"></a>
+        <li class="orange-btn icon-menu">
+            <a class="icon-menu" data-id=""><img class="hamburger" src="https://img.icons8.com/ultraviolet/40/000000/menu.png"></a>
         </li>
-        <li>
+        <li class="mobi-list green-btn">
             <a class="btn" href="">Регистрация</a>
         </li>
-        <li>
+        <li class="mobi-list orange-btn">
             <a class="btn" href="">войти</a>
         </li>
     </ul>
