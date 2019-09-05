@@ -4,11 +4,14 @@ body {
   display: grid;
   //grid-template-rows: 15% 1fr 1fr 1fr 5%;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
+  grid-gap: 0px;
   margin: 0;
+  ul {
+    list-style: none;
+  }
 
   .container {
-    max-width: 1000px;
+    width: 1000px;
     margin: 0 auto;
   }
   .button-blu {
@@ -48,11 +51,40 @@ body {
 
   }
 }
-
-
-@media screen and (max-width: 769px) {
-  .top-menu {
-    display: none!important;
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 730px;
   }
 }
 
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  //.top-menu {
+  //  display: none!important;
+  //}
+}
+
+//body {
+//  left: 0;
+//  margin: 0;
+//  overflow: hidden;
+//  position: relative;
+//}
+
+
+/* Menu */
+
+ @media screen and (max-width: 767px) {
+   .btn {
+     font-family: 'Roboto Condensed', sans-serif;
+     height: 30px;
+     line-height: 30px;
+     text-decoration: none;
+     color: #ffffff;
+     font-size: 14px;
+     text-transform: uppercase;
+   }
+ }

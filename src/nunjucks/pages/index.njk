@@ -1,11 +1,60 @@
 {% extends "src/nunjucks/templates/indexTemplate.njk" %}
+
+{% from "src/nunjucks/templates/components/models/carousel.njk" import winerCarousel %}
 {% set title = "Casino" %}
 
 
-{% block body %}
-        <div class="container">
-            <div class="row">
-            </div>
-        </div>
+{% block jackpot %}
+    <div class="jackpot">
+         <div class=" jackpot-container">
+             <div class="winner-box">
+                 <div class="jackpot-text">
+                     last winners
+                 </div>
+                 {{ winerCarousel('winerCarousel') }}
+
+                 <div class="winer">
+                     <div>1</div>
+                     <div>2</div>
+                     <div>3</div>
+                     <div>4</div>
+                     <div>5</div>
+                     <div>6</div>
+                 </div>
+             </div>
+             <div class="jackpot-box">
+                 <div class="jackpot-text-number">
+                     jackpot
+                 </div>
+                 <div class="jackpot-content">
+                     <div class="jackpot-number">
+                         <div>
+                             <img src="images/GOLDEN.png" alt="">
+                         </div>
+                         <div>
+                             <img src="images/goldNumber.png" alt="">
+                         </div>
+                     </div>
+                     <div class="jackpot-number">
+                         <div>
+                             <img src="images/SILVER.png" alt="">
+                         </div>
+                         <div>
+                             <img src="images/silverNumber.png" alt="">
+                         </div>
+                     </div>
+                     <div class="jackpot-number">
+                         <div>
+                             <img src="images/BRONZE.png" alt="">
+                         </div>
+                         <div>
+                             <img src="images/bronzeNumber.png" alt="">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+    </div>
 {% endblock %}
 

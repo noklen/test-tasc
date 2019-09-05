@@ -23,12 +23,13 @@
       line-height: 1.111;
       text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
     }
-    .win-players {
+    .winerCarousel {
       display: flex;
       justify-content: center;
       align-items: center;
       .win-card {
         display: flex;
+        flex-direction: row;
         margin: 0 10px;
         .win-card-img {
           display: flex;
