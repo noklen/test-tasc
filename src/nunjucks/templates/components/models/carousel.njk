@@ -28,27 +28,56 @@
         game: 'game of thrones',
         count: '185.00$',
         playerName:'PlayerName'
+    }
+
+] %}
+
+{% set jackpotList = [
+    {
+        place: 'images/GOLDEN.png',
+        number: 'images/goldNumber.png'
     },
     {
-        url: 'images/robyn.png',
-        game: 'robyn',
-        count: '185.00$',
-        playerName:'PlayerName'
+        place: 'images/SILVER.png',
+        number: 'images/silverNumber.png'
+    },
+    {
+        place: 'images/BRONZE.png',
+        number: 'images/bronzeNumber.png'
     }
 ] %}
 
 {%  macro winerCarousel (class) %}
+    <div class="jackpot-number {{ class }}">
+        <div class="swiper-wrapper">
+            {% for items in winList %}
+                <div class="win-card">
+                    <div class="win-card-img">
+                        <img src="{{ items.url }}" alt="">
+                    </div>
+                    <div class="win-card-info">
+                        <div class="win-game">{{ items.game }}</div>
+                        <div class="win-value">{{ items.count }}</div>
+                        <div class="win-name">{{ items.playerName }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+{% endmacro %}
+
+{% macro jackpot (class) %}
     <div class="{{ class }}">
-        {% for items in winList %}
-            <div class="win-card">
-                <div class="win-card-img">
-                    <img src="{{ items.url }}" alt="">
-                </div>
-                <div class="win-card-info">
-                    <div class="win-game">{{ items.game }}</div>
-                    <div class="win-value">{{ items.count }}</div>
-                    <div class="win-name">{{ items.playerName }}</div>
-                </div>
+        {% for items in jackpotList %}
+            <div>
+                <img src="{{ items.place }}" alt="">
+            </div>
+            <div>
+                <img src="{{ items.number}}" alt="">
             </div>
         {% endfor %}
     </div>

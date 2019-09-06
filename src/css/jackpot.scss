@@ -24,11 +24,16 @@
       text-shadow: 0 0 5px #a54635, 0 0 10px #a54635, 0 0 15px #a54635, 0 0 20px #a54635, 0 0 30px #a54635, 0 0 40px #a54635, 0 0 20px #a54635, 0 0 20px #a54635;
     }
     .winerCarousel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+      .swiper-wrapper {
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+      }
       .win-card {
-        //width: 160px!important;
+        width: 200px!important;
         display: flex!important;
         flex-direction: row;
         margin: 0 10px;

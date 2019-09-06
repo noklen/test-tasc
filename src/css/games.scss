@@ -79,6 +79,7 @@
   .games-list {
     font-family: 'Roboto Condensed', sans-serif;
 
+
     .first-list {
       padding: 0;
     }
@@ -250,4 +251,14 @@
 }
 
 
-
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  .box2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}

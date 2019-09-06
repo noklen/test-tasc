@@ -53,5 +53,18 @@ $(document).ready(function() {
             $('.mobil-back').addClass('none');
         });
 
+    var mySwiper = new Swiper ('.swiper-container', {
+        // slidesPerView: 3,
+        // freeMode: true,
+        // autoplay: {
+        //     delay: 5000,
+        // },
+        // spaceBetween: 60,
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        // },
+    })
+
 
 });
