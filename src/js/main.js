@@ -18,24 +18,17 @@ $(document).ready(function() {
     //         $("#games").appendTo("#gameList");
     //     }
     // }
-    //
-    // $(".card").mouseenter(function() {
-    //     $('.games-list  #' + this.id + ' .overlay').addClass('overlay-flex');
-    // });
-    // $(".card").mouseleave(function() {
-    //     $('.games-list  #' + this.id + ' .overlay').removeClass('overlay-flex');
-    // });
-    //
+
+    $(".card").mouseenter(function() {
+        $('.games-list  #' + this.id + ' .overlay').addClass('overlay-flex');
+    });
+    $(".card").mouseleave(function() {
+        $('.games-list  #' + this.id + ' .overlay').removeClass('overlay-flex');
+    });
+
     // $(window).on('load resize',winSize);
     // $(window).on('load resize',moveGame);
 
-    $('.winerCarousel').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        // variableWidth: true,
-});
 
 
         $('.icon-menu').click(function() {
@@ -53,18 +46,22 @@ $(document).ready(function() {
             $('.mobil-back').addClass('none');
         });
 
-    var mySwiper = new Swiper ('.swiper-container', {
-        // slidesPerView: 3,
-        // freeMode: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-        // spaceBetween: 60,
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
-    })
-
-
 });
+
+var swiper = new Swiper('.jackpot-number', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+var swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    autoplay: {
+        delay: 3000,
+    },
+});
+

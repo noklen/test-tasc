@@ -1,0 +1,41 @@
+{% set gameList = [
+    {
+        img: 'images/LuckyMagic.png',
+        name: 'lucky magic'
+    },
+    {
+        img: 'images/AnubisSecret.png',
+        name: 'anubis secret'
+    },
+    {
+        img: 'images/DreamOfKnight.png',
+        name: 'dream of knight'
+    }
+
+]  %}
+{% set count = 0 %}
+
+
+{% macro gameCardContent (id) %}
+    {% for item in gameList %}
+        <div class="card" id="{{ loop.index }}{{ id }}">
+            <img class="img-game" src="{{ item.img }}" alt="">
+            <div class="overlay">
+                <div class="play-now-container">
+                    <button class="play-now button-blu box-blu button-blu box-blu button-hover-blu">play now</button>
+                    <button class="demo button-red box-red button-hover-red">demo</button>
+                </div>
+            </div>
+            <div class="card-text">{{ item.name }}</div>
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{#{#}
+{#img: 'images/Submarine.png',#}
+{#name: 'Submarine adventure'#}
+{#},#}
+{#{#}
+{#img: 'images/MoneyScent.png',#}
+{#name: 'the big money scent'#}
+{#}#}
