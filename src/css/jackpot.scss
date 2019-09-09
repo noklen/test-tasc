@@ -3,10 +3,15 @@
   background: #000000;
   height: 100%;
   font-family: 'Roboto Condensed', sans-serif;
+  padding: 1rem 0;
   .jackpot-container {
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .jackpot-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .jackpot-text {
       margin: 13px 55px 30px 55px;
       font-size: 18px;
@@ -28,15 +33,15 @@
       //justify-content: center;
       //align-items: center;
       .swiper-wrapper {
-        display: flex!important;
+        display: flex;
         align-items: center;
         justify-content: center;
       }
       .win-card {
-        width: 200px!important;
-        display: flex!important;
+        display: flex;
         flex-direction: row;
         margin: 0 10px;
+        width: 150px;
         .win-card-img {
           display: flex;
           align-items: center;
@@ -59,32 +64,31 @@
         }
       }
     }
-    .jackpot-content {
-      display: flex;
       .jackpot-number {
         display: flex;
         align-items: center;
       }
 
-    }
   }
 }
-.winner-box {
-  max-width: 60%;
-  .winerCarousel {
-    width: 90%;
-  }
-
-}
-.jackpot-box {
-  max-width: 40%;
-}
- @media screen and (max-width: 1024px) {
-   .jackpot-container{
-     display: flex;
-     justify-content: center;
-     align-items: start;
-     flex-direction: column;
+//.winner-box {
+//  max-width: 60%;
+//  .winerCarousel {
+//    width: 90%;
+//  }
+//
+//}
+//.jackpot-box {
+//  max-width: 40%;
+//}
+ @media screen and (max-width: 1023px) {
+   .jackpot .jackpot-container .jackpot-text {
+     margin-left: 10px;
+   }
+   .jackpot > .jackpot-container{
+     grid-template-rows: 1fr 1fr;
+     grid-template-columns: 1fr;
+     margin-top: 20px;
      .winner-box {
        max-width: 100%;
        .winerCarousel {
@@ -97,8 +101,32 @@
    }
  }
 
-@media screen and (max-width: 1199px) {
-  .filter-list-text {
-    font-size: 14px!important;
+@media screen and (max-width: 767px) {
+  .jackpot .jackpot-container .jackpot-text {
+    margin-left: 10px;
   }
 }
+@media screen and (max-width: 500px) {
+  .jackpot-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .jackpot-number {
+    flex-direction: column;
+  }
+  .jackpot-container > .winner-box > .jackpot-text {
+    margin: 1rem;
+  }
+  .winner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .jackpot-number > .win-card {
+      padding: 0.5rem 0;
+    }
+  }
+}
+

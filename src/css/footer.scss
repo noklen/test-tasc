@@ -13,6 +13,7 @@
     color: rgb(162, 161, 161);
     cursor: pointer;
     .footer-nav-content {
+      display: flex;
       justify-content: center;
       align-items: center;
       .footer-text {
@@ -20,6 +21,8 @@
         color: rgb(162, 161, 161);
         text-transform: uppercase;
         line-height: 1.2;
+        text-decoration: none;
+        margin: 0 0.5rem;
 
       }
       .footer-text:hover {
@@ -50,4 +53,7 @@
 .payment-list {
   flex-direction: column;
 }
+  .footer > .container >.footer-nav {
+    display: none;
+  }
 }

@@ -1,6 +1,8 @@
 {% extends "src/nunjucks/templates/indexTemplate.njk" %}
-{% from "src/nunjucks/templates/components/models/carousel.njk" import winerCarousel, jackpot %}
+{% from "src/nunjucks/templates/components/models/carousel.njk" import winerCarousel, jackpot, gamePromotion %}
 {% from "src/nunjucks/templates/components/models/gameCard.njk" import gameCardContent %}
+{% from "src/nunjucks/templates/components/models/sort.njk" import sort %}
+
 {% set title = "Casino" %}
 
 
@@ -17,9 +19,7 @@
                  <div class="jackpot-text-number">
                      jackpot
                  </div>
-                 <div class="jackpot-content">
-                     {{ jackpot('jackpot-number') }}
-                 </div>
+                 {{ jackpot('jackpot-number') }}
              </div>
          </div>
     </div>
@@ -31,36 +31,7 @@
             <div class="game-menu-box">
                 <div class="filter-list">
                     <div class="game-cort">
-                        <div class="filter-list-butt">
-                            <a class="filter-list-text">
-                                <img class="filter-img" src="images/POPULAR.png" alt="">
-                                popular
-                            </a>
-                        </div>
-                        <div class="filter-list-butt">
-                            <a class="filter-list-text">
-                                <img class="filter-img" src="images/NEW.png" alt="">
-                                new
-                            </a>
-                        </div>
-                        <div class="filter-list-butt">
-                            <a class="filter-list-text">
-                                <img class="filter-img" src="images/SLOTGAME.png" alt="">
-                                slot games
-                            </a>
-                        </div>
-                        <div class="filter-list-butt">
-                            <a class="filter-list-text">
-                                <img class="filter-img" src="images/CARDS.png" alt="">
-                                card games
-                            </a>
-                        </div>
-                        <div class="filter-list-butt">
-                            <a class="filter-list-text">
-                                <img class="filter-img" src="images/ROULETTE.png" alt="">
-                                roulette
-                            </a>
-                        </div>
+                       {{ sort() }}
                     </div>
                     <div class="filter-group">
                         <div class="filter-sort">
@@ -89,31 +60,7 @@
                                         <div class="promotion">
                                             <div class="promotion-content">promotion</div>
                                         </div>
-                                        <div class="swiper-container">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide"><img class="img-game" src="images/sliderImage.png" alt="...">
-                                                    <div class="carousel-caption">
-                                                        <img src="images/sliderText.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide"><img class="img-game" src="images/sliderImage.png" alt="...">
-                                                    <div class="carousel-caption">
-                                                        <img src="images/sliderText.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide"><img class="img-game" src="images/sliderImage.png" alt="...">
-                                                    <div class="carousel-caption">
-                                                        <img src="images/sliderText.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide"><img class="img-game" src="images/sliderImage.png" alt="...">
-                                                    <div class="carousel-caption">
-                                                        <img src="images/sliderText.png" alt="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper-pagination"></div>
-                                        </div>
+                                        {{ gamePromotion('clide') }}
                                     </div>
                                 </div>
                             {% endif %}

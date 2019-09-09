@@ -1,0 +1,33 @@
+{% set listSort = [
+    {
+        img: 'images/POPULAR.png',
+        name: 'popular'
+    },
+    {
+        img: 'images/NEW.png',
+        name: 'new'
+    },
+    {
+        img: 'images/SLOTGAME.png',
+        name: 'slot games'
+    },
+    {
+        img: 'images/CARDS.png',
+        name: 'card games'
+    },
+    {
+        img: 'images/ROULETTE.png',
+        name: 'roulette'
+    }
+] %}
+
+{% macro sort(class) %}
+    {% for item in listSort %}
+        <div class="filter-list-butt">
+            <a class="filter-list-text {{ class }}">
+                <img class="filter-img" src="{{ item.img }}" alt="">
+                {{ item.name }}
+            </a>
+        </div>
+    {% endfor %}
+{% endmacro %}

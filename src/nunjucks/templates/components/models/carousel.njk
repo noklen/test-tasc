@@ -34,9 +34,15 @@
     }
 ] %}
 
+{% set promotionList = [
+    {
+        img: 'images/sliderImage.png',
+        text: 'images/sliderText.png'
+    }
+] %}
+
 {%  macro winerCarousel (class) %}
     <div class="jackpot-number {{ class }}">
-        <div class="swiper-wrapper">
             {% for items in winList %}
                 <div class="win-card">
                     <div class="win-card-img">
@@ -49,23 +55,37 @@
                     </div>
                 </div>
             {% endfor %}
-        </div>
-{#        <div class="swiper-pagination"></div>#}
-{#        <div class="swiper-button-prev"></div>#}
-{#        <div class="swiper-button-next"></div>#}
-{#        <div class="swiper-scrollbar"></div>#}
     </div>
 {% endmacro %}
 
 {% macro jackpot (class) %}
     <div class="{{ class }}">
         {% for items in jackpotList %}
-            <div>
-                <img src="{{ items.place }}" alt="">
-            </div>
-            <div>
-                <img src="{{ items.number}}" alt="">
+            <div class="jackpot-count">
+                <div>
+                    <img src="{{ items.place }}" alt="">
+                </div>
+                <div>
+                    <img src="{{ items.number}}" alt="">
+                </div>
             </div>
         {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro gamePromotion(class) %}
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {% for i in range(0, 4) %}
+                {% for item in promotionList %}
+                    <div class="swiper-slide {{ class }}"><img class="img-game" src="{{ item.img }}" alt="...">
+                        <div class="carousel-caption">
+                            <img src="{{ item.text }}" alt="">
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}]
+        </div>
+        <div class="swiper-pagination"></div>
     </div>
 {% endmacro %}

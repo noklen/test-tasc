@@ -46,15 +46,7 @@ $(document).ready(function() {
             $('.mobil-back').addClass('none');
         });
 
-});
 
-var swiper = new Swiper('.jackpot-number', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
 });
 var swiper = new Swiper('.swiper-container', {
     pagination: {
