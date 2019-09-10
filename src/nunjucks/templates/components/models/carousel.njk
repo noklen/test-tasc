@@ -42,11 +42,11 @@
 ] %}
 
 {%  macro winerCarousel (class) %}
-    <div class="jackpot-number {{ class }}">
+    <div class="jackpot-number {{ class }}" id="slider_1">
             {% for items in winList %}
                 <div class="win-card">
                     <div class="win-card-img">
-                        <img src="{{ items.url }}" alt="">
+                        <img class="jackpot-img" src="{{ items.url }}" alt="">
                     </div>
                     <div class="win-card-info">
                         <div class="win-game">{{ items.game }}</div>
@@ -63,10 +63,10 @@
         {% for items in jackpotList %}
             <div class="jackpot-count">
                 <div>
-                    <img src="{{ items.place }}" alt="">
+                    <img class="jackpot-img" src="{{ items.place }}" alt="">
                 </div>
                 <div>
-                    <img src="{{ items.number}}" alt="">
+                    <img class="jackpot-img" src="{{ items.number}}" alt="">
                 </div>
             </div>
         {% endfor %}
@@ -74,7 +74,7 @@
 {% endmacro %}
 
 {% macro gamePromotion(class) %}
-    <div class="swiper-container">
+    <div class="swiper-container" id="slider_2">
         <div class="swiper-wrapper">
             {% for i in range(0, 4) %}
                 {% for item in promotionList %}

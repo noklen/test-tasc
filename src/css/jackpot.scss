@@ -5,15 +5,14 @@
   font-family: 'Roboto Condensed', sans-serif;
   padding: 1rem 0;
   .jackpot-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     .jackpot-count {
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .jackpot-text {
-      margin: 13px 55px 30px 55px;
+      margin: 13px 10px 30px;
       font-size: 18px;
       text-transform: uppercase;
       color: #ffce81;
@@ -41,7 +40,7 @@
         display: flex;
         flex-direction: row;
         margin: 0 10px;
-        width: 150px;
+        //width: 140px;
         .win-card-img {
           display: flex;
           align-items: center;
@@ -71,26 +70,24 @@
 
   }
 }
-//.winner-box {
-//  max-width: 60%;
-//  .winerCarousel {
-//    width: 90%;
-//  }
-//
-//}
-//.jackpot-box {
-//  max-width: 40%;
-//}
+.winner-box {
+  width: 50%;
+
+}
+.jackpot-box {
+  width: 50%;
+}
  @media screen and (max-width: 1023px) {
    .jackpot .jackpot-container .jackpot-text {
      margin-left: 10px;
    }
    .jackpot > .jackpot-container{
-     grid-template-rows: 1fr 1fr;
-     grid-template-columns: 1fr;
-     margin-top: 20px;
+     flex-direction: column;
+     .jackpot-number {
+       justify-content: space-around;
+     }
      .winner-box {
-       max-width: 100%;
+       width: 100%;
        .winerCarousel {
          width: 100%;
        }
@@ -99,7 +96,15 @@
        max-width: 100%;
      }
    }
+   .winner-box {
+     width: 100%;
+
+   }
+   .jackpot-box {
+     width: 100%;
+   }
  }
+
 
 @media screen and (max-width: 767px) {
   .jackpot .jackpot-container .jackpot-text {
@@ -108,13 +113,13 @@
 }
 @media screen and (max-width: 500px) {
   .jackpot-box {
-    align-items: center;
+    //align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
-  .jackpot-number {
-    flex-direction: column;
+  .jackpot-img {
+    width: 50px;
   }
   .jackpot-container > .winner-box > .jackpot-text {
     margin: 1rem;
@@ -123,10 +128,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    .jackpot-number > .win-card {
+    .jackpot .jackpot-container .winerCarousel .win-card {
       padding: 0.5rem 0;
+      width: 100px;
     }
+  }
+  .jackpot .jackpot-container .winerCarousel .win-card .win-card-info {
+    font-size: 7px;
   }
 }
 

@@ -101,7 +101,7 @@
           display: none;
           position: absolute;
           background-color: #f9f9f9;
-          width: 140px;
+          width: 88px;
           z-index: 10000;
         }
 
@@ -233,7 +233,7 @@
 
 
 .menu {
-  background: #000000;
+  background: #001621;
   left: -285px;
   height: 100%;
   position: fixed;
@@ -258,9 +258,9 @@
 }
 
 .menu li {
-  border-bottom: 1px solid #555;
+  //border-bottom: 1px solid #555;
   font-family: 'Open Sans', sans-serif;
-  line-height: 45px;
+  line-height: 25px;
   padding-bottom: 3px;
   padding-left: 20px;
   padding-top: 3px;
@@ -277,6 +277,25 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+.mobi-categorii {
+  color: #fff;
+  padding-left: 20px;
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.sort-nav {
+  color: #fff;
+  font-size: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  .text-nav {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
 
 .icon-close {
   display: flex;
@@ -292,6 +311,10 @@
 }
 
 .icon-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 5px;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
@@ -303,8 +326,8 @@
   }
 }
 @media screen and (max-width: 1023px) {
-  .text-decor {
-    font-size: 8px!important;
+  .header .header-content .top-menu .text-decor {
+    font-size: 8px;
   }
   .fast-registration-content {
     padding: 0!important;

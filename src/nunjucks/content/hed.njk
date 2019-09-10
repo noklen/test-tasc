@@ -1,10 +1,15 @@
 {% from "src/nunjucks/templates/components/header/headerComponent.njk" import header_nav, social %}
+{% from "src/nunjucks/templates/components/models/sort.njk" import sortNav %}
 <div class="menu">
     <div class="icon-close">
         <img class="mobi-lan" src="images/usFlag.png">
         <img class="mobi-lan" src="images/rufFlag.png">
     </div>
     {{ header_nav('nav-item ') }}
+    <div>
+        <h3 class="mobi-categorii">category</h3>
+        {{ sortNav('sort-nav') }}
+    </div>
 </div>
 
 <div class="top-menu">

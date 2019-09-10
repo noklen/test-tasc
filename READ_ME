@@ -2,4 +2,5 @@ For install project:
 /**/npm i
 For start project:
 /**/gulp build
+/**/gulp build
 /**/open 'build' directory and open 'index.html' file

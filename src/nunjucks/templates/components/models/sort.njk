@@ -31,3 +31,11 @@
         </div>
     {% endfor %}
 {% endmacro %}
+
+{% macro sortNav(class) %}
+    <ul class="{{ class }}">
+        {%  for item in listSort %}
+            <li class="text-nav"> {{ item.name }} </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

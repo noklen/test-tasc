@@ -8,7 +8,6 @@ const del = require('del');
 const htmlmin = require('gulp-html-minifier2');
 const imagemin = require('gulp-imagemin');
 const njkRender = require('gulp-nunjucks-render');
-const prettify = require('gulp-html-prettify');
 
 function styles() {
     return gulp.src('./src/css/*.scss')
@@ -32,12 +31,6 @@ function script() {
         }))
         .pipe(gulp.dest('./build/js'));
 }
-// function html() {
-//     return gulp.src('./index.html')
-//         .pipe(htmlmin({collapseWhitespace: true}))
-//         .pipe(gulp.dest('./build/'));
-//
-// }
 
 function image() {
     return gulp.src('./src/images/*')
@@ -48,8 +41,7 @@ function image() {
 function nunjucks() {
     return gulp.src('src/nunjucks/pages/*.njk')
         .pipe(njkRender())
-        .pipe(prettify({indent_size : 4}))
-        // .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('./build'));
 
 }
@@ -57,7 +49,6 @@ function nunjucks() {
 function watch() {
     gulp.watch('./src/css/*.scss', styles);
     gulp.watch('./src/js/*.js', script);
-    // gulp.watch('./index.html', html);
     gulp.watch('./**/*.njk', nunjucks);
 }
 
@@ -75,7 +66,6 @@ gulp.task(
 
 gulp.task('style', styles);
 gulp.task('script', script);
-// gulp.task('html', html);
 gulp.task('image', image);
 gulp.task('nunjucks', nunjucks);
 gulp.task('watch', watch);

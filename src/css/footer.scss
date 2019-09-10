@@ -1,7 +1,4 @@
 .footer {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
   background: #000000;
   font-family: 'Roboto Condensed', sans-serif;
   .footer-nav {
@@ -38,11 +35,13 @@
     align-items: center;
     flex-direction: column;
     .payment-list {
-      display: flex;
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       justify-content: center;
       align-items: center;
       .payment {
-        margin: 1rem;
+        margin: .5rem;
         cursor: pointer;
 
       }
@@ -50,10 +49,13 @@
   }
 }
 @media screen and (max-width: 768px) {
-.payment-list {
-  flex-direction: column;
-}
   .footer > .container >.footer-nav {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-payment-img {
+    width: 100px;
   }
 }

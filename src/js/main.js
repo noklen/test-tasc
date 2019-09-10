@@ -11,13 +11,16 @@ $(document).ready(function() {
     //     }
     // }
     //
-    // function moveGame () {
-    //     if ($(window).width() <= 1024) {
-    //         $("#games").appendTo("#gamesMobil");
-    //     } else {
-    //         $("#games").appendTo("#gameList");
-    //     }
-    // }
+    function moveGame () {
+        if ($(window).width() <= 767) {
+            var swiper = new Swiper('#slider_1', {
+
+            });
+
+        } else {
+            $("#games").appendTo("#gameList");
+        }
+    }
 
     $(".card").mouseenter(function() {
         $('.games-list  #' + this.id + ' .overlay').addClass('overlay-flex');
@@ -48,7 +51,7 @@ $(document).ready(function() {
 
 
 });
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('#slider_2', {
     pagination: {
         el: '.swiper-pagination',
     },
@@ -56,4 +59,11 @@ var swiper = new Swiper('.swiper-container', {
         delay: 3000,
     },
 });
-
+// var swiper = new Swiper('#slider_1', {
+//     slidesPerView: 3,
+//     // spaceBetween: 10,
+//     autoplay: {
+//         delay: 5000,
+//     },
+//
+// });
